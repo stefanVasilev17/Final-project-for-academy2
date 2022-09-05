@@ -1,0 +1,4 @@
+        " SELECT PARTICIPANTS.names,PARTICIPANTS.last_name,LINKS.type                     "
+     +  " FROM PARTICIPANTS                                                               "
+     +  " JOIN LINKS ON PARTICIPANTS.participantsReference = links.participantsReference  "
+     +  " JOIN CONTRACTS ON LINKS.contract_reference = 'cnt_primery_key1';                "

@@ -1,0 +1,21 @@
+
+
+INSERT INTO CONTRACTS(contract_reference, contract_info) VALUES ('cnt_primery_key1', 'Some info')
+INSERT INTO CONTRACTS(contract_reference, contract_info) VALUES ('cnt_primery_key2', 'Some info')
+SELECT * FROM CONTRACTS
+SELECT * FROM LINKS
+SELECT * FROM PARTICIPANTS
+DELETE FROM CONTRACTS
+DELETE FROM PARTICIPANTS
+DELETE FROM LINKS
+
+INSERT  INTO  PARTICIPANTS (names, last_name, country, city, participantsReference) VALUES ('BANK1', 'BANK PPP', 'Bulgaria', 'Sofia', 'part_primery_key1')
+INSERT  INTO  PARTICIPANTS (names, last_name, country, city, participantsReference) VALUES ('Ivan', 'Ivanov', 'Bulgaria', 'Plovdiv', 'part_primery_key2')
+INSERT  INTO  PARTICIPANTS (names, last_name, country, city, participantsReference) VALUES ('Marin', 'Marinov', 'Bulgaria', 'Ruse', 'part_primery_key3')
+INSERT  INTO  PARTICIPANTS (names, last_name, country, city, participantsReference) VALUES ('BANK2', 'BANK CC', 'Bulgaria', 'Sofia', 'part_primery_key4')
+
+INSERT INTO links (contract_reference, participantsReference, type) VALUES ('cnt_primery_key1', 'part_primery_key1', 'CLIENT');
+INSERT INTO links (contract_reference, participantsReference, type) VALUES ('cnt_primery_key1', 'part_primery_key2', 'DEBITOR');
+INSERT INTO links (contract_reference, participantsReference, type) VALUES ('cnt_primery_key2', 'part_primery_key1', 'CLIENT');
+INSERT INTO links (contract_reference, participantsReference, type) VALUES ('cnt_primery_key2', 'part_primery_key3', 'DEBITOR');
+

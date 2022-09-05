@@ -1,0 +1,52 @@
+----CREATE TABLE users2(id INT PRIMARY KEY, name VARCHAR(150), login VARCHAR2(20))
+----CREATE TABLE privilegeCodix(id INT PRIMARY KEY, name VARCHAR(150), key VARCHAR2(1))
+----CREATE TABLE usres_privilege22(id7 INT PRIMARY KEY,id_user INT,id_privilege INT,FOREIGN KEY (ID_USER) REFERENCES users (id7),FOREIGN KEY (ID_PRIVILEGE) REFERENCES privilege (id7))
+----INSERT INTO users2 (id,name, login) VALUES (1,'ADMIN', 'admin')
+--
+----CREATE TABLE PARTICIPANTS(names VARCHAR2(40) NOT NULL,last_name VARCHAR2(40) NOT NULL,country VARCHAR2(30) NOT NULL,city VARCHAR2(30) NOT NULL,participantsReference VARCHAR2(60) NOT NULL PRIMARY KEY)
+--
+--CREATE TABLE CONTRACTS(contract_reference VARCHAR2(40) NOT NULL PRIMARY KEY ,contract_info VARCHAR2(40) NOT NULL)
+--CREATE TABLE
+--INSERT  INTO  PARTICIPANTS (names, last_name, country, city, participantsReference) VALUES ('BANK1', 'BANK PPP', 'Bulgaria', 'Sofia', 'part_primery_key1')
+--INSERT  INTO  PARTICIPANTS (names, last_name, country, city, participantsReference) VALUES ('Ivan', 'Ivanov', 'Bulgaria', 'Plovdiv', 'part_primery_key2');
+--INSERT  INTO  PARTICIPANTS (names, last_name, country, city, participantsReference) VALUES ('ADMIN', 'Marinov', 'Bulgaria', 'Ruse', 'part_primery_key3');
+--INSERT  INTO  PARTICIPANTS (names, last_name, country, city, participantsReference) VALUES ('admin', 'BANK CC', 'Bulgaria', 'Sofia', 'part_primery_key4');
+--INSERT INTO links (contract_reference, participantsReference, type) VALUES ('cnt_primery_key1', 'part_primery_key1', 'CLIENT');
+--INSERT INTO links (contract_reference, participantsReference, type) VALUES ('cnt_primery_key1', 'part_primery_key2', 'DEBITOR');
+--INSERT INTO links (contract_reference, participantsReference, type) VALUES ('cnt_primery_key2', 'part_primery_key4', 'CLIENT');
+--INSERT INTO links (contract_reference, participantsReference, type) VALUES ('cnt_primery_key2', 'part_primery_key3', 'DEBITOR');
+--INSERT INTO CONTRACTS(contract_reference, contract_info) VALUES ('cnt_primery_key1', 'Some info');
+--INSERT INTO CONTRACTS(contract_reference, contract_info) VALUES ('cnt_primery_key2', 'Some info');
+--
+--
+--
+--INSERT  INTO  PARTICIPANTS (names, last_name, country, city, participantsReference)
+--VALUES ('admin', 'BANK CC', 'Bulgaria', 'Sofia', 'part_primery_key4');
+--
+--INSERT INTO links (contract_reference, participantsReference, type)
+--VALUES ('cnt_primery_key2', 'part_primery_key4', 'CLIENT');
+--
+--INSERT INTO CONTRACTS(contract_reference, contract_info)
+-- VALUES ('cnt_primery_key2', 'Some info');
+--
+--
+--SELECT CONTRACTS.contract_reference,CONTRACTS.contract_info
+--FROM CONTRACTS,LINKS,PARTICIPANTS
+--WHERE CONTRACTS.contract_reference = links.contract_reference
+--AND links.participantsReference = PARTICIPANTS.participantsReference
+--AND PARTICIPANTS.names = 'ivancho'
+--
+--SELECT * FROM CONTRACTS
+--SELECT * FROM PARTICIPANTS
+--SELECT * FROM LINKS
+
+--CREATE TABLE link(contract_reference VARCHAR2(40), participantsReference VARCHAR2(40),type VARCHAR2(15))
+SELECT * FROM LINKS
+SELECT * FROM PARTICIPANTS
+SELECT * FROM CONTRACTS
+SELECT * FROM USERS2
+SELECT * FROM privilegeCodix
+
+CREATE TABLE LINKS(contract_reference VARCHAR2(40),participantsReference VARCHAR2(40),type VARCHAR(15))
+
+CREATE TABLE PARTICIPANTS(names VARCHAR2(40) NOT NULL,last_name VARCHAR2(40) NOT NULL,country VARCHAR2(30) NOT NULL,city VARCHAR2(30) NOT NULL,participantsReference VARCHAR2(60) NOT NULL PRIMARY KEY)
